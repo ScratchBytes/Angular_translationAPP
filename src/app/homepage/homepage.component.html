@@ -1,0 +1,49 @@
+<section class="Parents">  
+  <div class="Child">
+    <div class="container">
+      <button (click)="toggleTheme()" id="darkmode-button">
+        <span class="material-symbols-sharp" id="lamp_on" *ngIf="!(isDarkMode$ | async)">lightbulb</span>
+        <span class="material-symbols-sharp" id="lamp_off" *ngIf="isDarkMode$ | async">light_off</span>
+      </button>
+    </div>
+    <section class="Header">
+      <figure>
+        <img *ngIf="!(isDarkMode$ | async)" src="assets/BOT-LightMode.gif" alt="Waiving Robot" id="headerLogo">
+        <img *ngIf="isDarkMode$ | async" src="assets/BOT-DarkMode.gif" alt="Waiving Robot" id="headerLogo">
+        <figcaption>TransBot</figcaption>
+      </figure>
+    </section>
+    <section class="Content">
+      <div class="getValue">
+        <mat-form-field appearance="outline" id="formField">
+          <mat-select [(ngModel)]="defaultLanguage" name="getLanguage">
+            <mat-option *ngFor="let getLanguage of Languages" [value]="getLanguage.value">
+              {{ getLanguage.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline" id="formField" class="formField">
+          <textarea matInput placeholder="Enter text" [(ngModel)]="inputText"></textarea>
+        </mat-form-field>
+      </div>
+      <button mat-icon-button (click)="swapLanguages()">
+        <mat-icon>swap_vert</mat-icon>
+      </button>
+      <div class="displayValue">
+        <mat-form-field appearance="outline" id="formField">
+          <mat-select [(ngModel)]="defaultOutLanguage" name="displayResult">
+            <mat-option *ngFor="let getLanguage of Languages" [value]="getLanguage.value">
+              {{ getLanguage.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline" id="formField" class="formField">
+          <textarea matInput placeholder="Translation" readonly [(ngModel)]="translatedText"></textarea>
+        </mat-form-field>
+      </div>
+    </section>
+    <div class="submit-button">
+      <button class="translate-button" (click)="translateText()">Translate</button>
+    </div>      
+  </div>
+</section>

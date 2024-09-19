@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Orbitron", sans-serif;
+    
+}
+
+/* Light Theme */
+:root {
+    --background-color: white;
+    --text-color: #1E1E1E;
+    --mat-select-value-color: #1E1E1E;
+    --button-border-color: black;
+}
+
+/* Dark Theme */
+body.dark-mode {
+    --background-color: #1E1E1E;
+    --text-color: white;
+    --mat-select-value-color: white;
+    --textarea: white;
+    --textarea-placeholder: azure;
+    --mdc-textfield-outline: white;
+    --mat-mdc-select-arrow: white;
+    --button-font-color: white;
+    --button-border-color: white;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.mat-mdc-select-value {
+    color: var(--mat-select-value-color);
+}
+
+.mat-mdc-select-arrow {
+    color: var(--mat-mdc-select-arrow) !important;
+}
+
+textarea {
+    color: var(--textarea) !important;
+}
+
+textarea::placeholder {
+    color: var(--textarea-placeholder) !important;
+}
+
+.mdc-text-field--outlined .mdc-notched-outline__leading,
+.mdc-text-field--outlined .mdc-notched-outline__trailing {
+    border-color: var(--mdc-textfield-outline) !important;
+}
+
+button.translate-button {
+    color: var(--button-font-color);
+    border: 1px solid var(--button-border-color)!important;
+}

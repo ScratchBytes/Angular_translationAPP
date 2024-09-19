@@ -1,0 +1,170 @@
+@keyframes Slide-in{
+    0%{
+        transform: skew(0deg) translateX(-20px);
+    }
+    28%{
+        transform: skew(0deg);
+    }
+}
+@keyframes Slide-out{
+    0%{
+        transform: skew(0deg) translateX(20px);
+    }
+    28%{
+        transform: skew(0deg);
+    }
+}
+
+.Parents {
+    display: flex;
+    justify-content: center;
+}
+
+.Child {
+    width: 370px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    margin-top: 30px;
+}
+
+#darkmode-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    margin-right: 20px;
+}
+
+#lamp_on {
+    font-size: 50px;
+    color: black;
+    cursor: pointer;
+}
+
+#lamp_off {
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.Header {
+    width: 100%;
+    margin-top: -100px;
+}
+
+#headerLogo {
+    width: 50%;
+}
+
+figure {
+    display: flex;
+}
+
+figure img {
+    margin-left: -165px;
+}
+
+figcaption {
+    font-size: 70px;
+    font-weight:600;
+    display: flex;
+    margin-top: 120px;
+    margin-left: -20px;
+}
+
+#formField {
+    width: 100%;
+}
+
+.formField {
+    margin-top: -15px;
+}
+
+::ng-deep .mat-mdc-select-value {
+    font-size: 12px;
+}
+
+::ng-deep .mat-mdc-option .mdc-list-item__primary-text {
+    font-size: 12px !important;
+    font-family: "Orbitron", sans-serif !important;
+}
+
+::ng-deep .mdc-text-field--no-label:not(.mdc-text-field--textarea) .mat-mdc-form-field-input-control.mdc-text-field__input, .mat-mdc-text-field-wrapper .mat-mdc-form-field-input-control {
+    height: 130px !important;
+    font-size: 12px !important;
+    font-family: "Orbitron", sans-serif !important;
+}
+
+.Content button{
+    margin-top: -15px;
+    margin-bottom: 8px;
+    margin-left: 45%;
+}
+.submit-button {
+    margin-top: -10px;
+}
+.submit-button button{
+    background-color: transparent;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-button button:hover{
+    font-size: 15px;
+    margin-top: -1px;
+    width: 102%;
+    margin-left: -4px;
+}
+
+@media screen and (max-width: 760px) {
+    .Child {
+        width: 80%;
+        padding-top: 5%;
+        animation: Slide-in 1s ease-in;
+        /* border: 1px solid black; */
+    }
+    .Header {
+        width: 100%;
+        margin-top: -23%;
+        /* border: 1px solid black; */
+    }
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content:center;
+        margin-top: 5%;
+        /* border: 1px solid black; */
+    }
+    #lamp_on {
+        font-size: 8vw;
+        color: black;
+        cursor: pointer;
+    }
+    
+    #lamp_off {
+        font-size: 8vw;
+        cursor: pointer;
+    }
+    #headerLogo {
+        width: 40%;
+    }
+    figcaption {
+        font-size: 11vw;
+        margin-top: 27%;
+        font-weight:600;
+    }
+    figure img {
+        margin-left: -30px;
+    }
+    
+}
+
+@media screen and (min-width: 760px) and (max-width: 770px) {
+    .Child {
+        animation: Slide-out 1s ease-out;
+    }
+}
